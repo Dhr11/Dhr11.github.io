@@ -238,9 +238,10 @@
 								effect: 'coverflow',
 								grabCursor: true,
 								centeredSlides: true,
-								slidesPerView: 3,
+								slidesPerView: 'auto',
 								slidesPerGroup: 1,
 								loop: true,
+								
 								coverflowEffect: {
 									rotate: 20,
 									stretch: 0,
@@ -256,7 +257,34 @@
 									nextEl: '.swiper-button-next',
 									prevEl: '.swiper-button-prev ',
 								},
-								});
+								/*
+								breakpoints: {
+								640: {
+								slidesPerView: 1,
+								
+								},
+								768: {
+								slidesPerView: 3,
+								
+								},
+								1024: {
+								slidesPerView: 3,
+								
+								},
+								}
+								*/
+								})
+								/*
+								$(window).resize(function(){
+								var ww = $(window).width()
+								if (ww>1000) swiper.slidesPerView = 3;
+								if (ww>468 && ww<=1000) swiper.params.slidesPerView = 3;
+								if (ww<=468) swiper.slidesPerView = 1;
+								swiper.resizeFix(true);
+								swiper.update();
+								})
+								$(window).trigger('resize')
+								*/
 							</script>
 						</div>
 					</section>		

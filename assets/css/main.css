@@ -2315,14 +2315,14 @@ input, select, textarea {
 				
 				/*width: 400px; 
 				height: 450px;*/
-				width: 100%;
-				height: 80%;
+				width: 350px;
+				height: 500px;
 
 				margin: 0 auto;
 			}
 			#main > section.five > .container .card .content
 			{
-				width: 100%;
+				width: 350px;
 				padding: 30px;
 				box-sizing: border-box;
 				margin: 0 auto;
@@ -2330,7 +2330,7 @@ input, select, textarea {
 			}
 			#main > section.five > .container .swiper-slide
 			{
-				width: 100%;
+				width: 350px;
 			}
 
 			#main > section.five > .container .card .content a
@@ -2346,8 +2346,9 @@ input, select, textarea {
 			#main > section.five > .container .card .sliderText
 			{
 				position: relative;
-				width: 100%;
-				height:  150px;
+				width: 350px;
+				height: 140px;
+				
 				display:flex;
 				justify-content: center;
 				align-items: center;
@@ -2398,15 +2399,11 @@ input, select, textarea {
 				
 			  }
 			/*  
-			#main > section.five > .container .swiper-container .swiper-pagination-bullets .swiper-pagination-bullet{
-					margin:0 9px;
-					position:relative;
-					width:12px;
-					height:12px;
-					background-color:#fff;
-					opacity:.4;
+			#main > section.five > .container .swiper-container {
+					slidesPerView:1;
 					
 			}
+			
 			#main > section.five > .container .swiper-container .swiper-pagination-bullets .swiper-pagination-bullet:before{
 					  content:'';
 					  position:absolute;
