@@ -2248,11 +2248,11 @@ input, select, textarea {
 					color: #fff;
 					border-color: inherit;
 					opacity: 1;
-					font-weight: 800;
-					position: relative;
-					text-align: right;
+					font-weight: 300;
+					
+					text-align: center;
 					justify-content: space-between;
-					display: flex;
+					
 					
 				}
 
@@ -2276,18 +2276,25 @@ input, select, textarea {
 
 			#main > section.one {
 				background-color: #81918E;
-				background-image: url("../../images/banner.jpg");
+				background-image: url("../../images/wall2.jpg");
 				
 				color: #fff;
-				font-weight: 900;
+				text-align: center;
 			}
 
 			#main > section.two {
 				background-color: #f5fafa;
 				font-size: 0.8em;
 				background-position: left;
+				
 			}
-
+			#main > section.two > .container li{
+				
+				text-align: justify;
+				justify-content: center;
+				
+				
+			}
 			#main > section.three {
 				background-color: #ecf1f1;
 			}
