@@ -2294,6 +2294,7 @@ input, select, textarea {
 
 			#main > section.four {
 				background-color: #e8edec;
+				font-size: 0.7em;
 			}
 
 			#main > section.five {
@@ -2332,7 +2333,16 @@ input, select, textarea {
 			{
 				width: 350px;
 			}
-
+			#main > section.five > .container .card .content
+			{
+				
+				font-weight: 400;
+			}
+			#main > section.five > .container .card .content h4
+			{
+				display: inline-block;
+				font-weight: 600;
+			}
 			#main > section.five > .container .card .content a
 			{
 				display: inline-block;
