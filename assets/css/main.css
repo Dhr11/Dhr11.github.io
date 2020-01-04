@@ -2303,7 +2303,37 @@ input, select, textarea {
 				background-color: #e8edec;
 				font-size: 0.7em;
 			}
+			#main > section.four > .container .middle 
+			{
+				position: relative;
+				top: 50%;
+				transform: translateY(10px);
+				width: 100%;
+				text-align: center;
+			}
+			#main > section.four > .container .middle .btn
+			{
+				display: inline-block;
+				width: 8%;
+				height: 30%;
+				background: #f1f1f1;
+				margin: 10px;
+				border-radius: 30%;
+				box-shadow: 0 5px 15px -5px #00000070;
+			}
+			#main > section.four > .container .middle .btn i
+			{
+				font-size: 16px;
+				transition: 0.2s linear;
+				
+			}
+			#main > section.four > .container .middle .btn:hover i
+			{
+				transform: scale(1.3);
+				
+			}
 
+							
 			#main > section.five {
 				background-color: #383838;
 				align-items: center;
@@ -2339,6 +2369,7 @@ input, select, textarea {
 			#main > section.five > .container .swiper-slide
 			{
 				width: 350px;
+				
 			}
 			#main > section.five > .container .card .content
 			{
@@ -2400,7 +2431,7 @@ input, select, textarea {
 			#main > section.five > .container .swiper-pagination {
 				position: relative;
 				display:inline-block;
-				padding: 10px 20px;
+				padding: 0px 20px;
 				
 				justify-content: center;
 				align-items: center;
