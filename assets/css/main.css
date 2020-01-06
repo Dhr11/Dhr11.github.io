@@ -2277,14 +2277,14 @@ input, select, textarea {
 			#main > section.one {
 				background-color: #81918E;
 				background-image: url("../../images/wall2.jpg");
-				
+				height: 700px;
 				color: #fff;
 				text-align: center;
 			}
 
 			#main > section.two {
-				background-color: #0000;
-				font-size: 0.8em;
+				background-color: #dce3e2;
+				
 				background-position: left;
 				
 			}
@@ -2305,50 +2305,19 @@ input, select, textarea {
 			#main > section.two > .container .box{
 				position: relative;
 				
-				
+				font-size: 0.8em;
 				background: rgb(61, 60, 60);
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				border-radius: 15px 50px 30px;
-				
+				box-shadow: 0 5px 25px rgba(0, 0, 0, 0.7);	
 			}
-			#main > section.two > .container .box::before{
-				content: '';
-				position: absolute;
-				border-radius: 15px 50px 30px;
-				top: -2px;
-				left: -2px;
-				right: -2px;
-				bottom: -2px;
-				background: rgb(255, 255, 255);
-				z-index: -1;
-				
-			}
-			#main > section.two > .container .box::after{
-				content: '';
-				position: absolute;
-				border-radius: 15px 50px 30px;
-				top: -10px;
-				left: -10px;
-				right: -10px;
-				bottom: -10px;
-				background: #222629;
-				
-				z-index: -2;
-				filter: blur(20px);
-				
-
-			}
-			#main > section.two > .container .box:before,
-			#main > section.two > .container .box:after
-			{
-				background: linear-gradient(235deg,#89ff00,#060c21,#00bcd4);
-			}
+			
 			#main > section.two > .container .content{
 			padding: 20px;
 			box-sizing: border-box;
-			color: #fff;
+			color: #9ececc;
 			}
 			#main > section.two > .container .content h3{
 				padding: 20px;
