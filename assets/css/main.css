@@ -88,7 +88,7 @@ input, select, textarea {
 		font-size: 17pt;
 		font-weight: 300;
 		line-height: 1.75em;
-		color: #888;
+		color: rgb(92, 92, 92);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -122,7 +122,7 @@ input, select, textarea {
 	}
 
 		h1 a strong, h2 a strong, h3 a strong, h4 a strong, h5 a strong, h6 a strong {
-			color: #333;
+			color: rgb(2, 2, 2);
 		}
 
 	h2 {
@@ -2283,7 +2283,8 @@ input, select, textarea {
 			}
 
 			#main > section.two {
-				background-color: #dce3e2;
+				background-color: #ffffff;
+				
 				
 				background-position: left;
 				
@@ -2311,6 +2312,9 @@ input, select, textarea {
 				justify-content: center;
 				align-items: center;
 				border-radius: 15px 50px 30px;
+				
+			}
+			#main > section.two > .container .box:hover{
 				box-shadow: 0 5px 25px rgba(0, 0, 0, 0.7);	
 			}
 			
@@ -2319,6 +2323,9 @@ input, select, textarea {
 			box-sizing: border-box;
 			color: #9ececc;
 			}
+			#main > section.two > .container .content:hover{
+				color: #fff;
+				}			
 			#main > section.two > .container .content h3{
 				padding: 20px;
 				box-sizing: border-box;
@@ -2334,7 +2341,7 @@ input, select, textarea {
 
 			#main > section.four {
 				background-color: #e8edec;
-				font-size: 0.7em;
+				
 			}
 			#main > section.four > .container .middle 
 			{
