@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhruuv Agarwal | Research & Engineering</title>
+    <meta name="description" content="Portfolio of Dhruuv Agarwal, Senior Software Engineer at Google DeepMind. Research in ASR, LLMs, and On-Device ML.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #0ea5e9;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--accent);
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--accent-hover);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .nav-content {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        header {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            padding-top: 80px; 
+        }
+
+        .hero-content {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 1s forwards 0.2s;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .bio {
+            max-width: 600px;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .social-links a {
+            font-size: 1.5rem;
+            margin-right: 20px;
+            color: var(--text-secondary);
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+            transform: translateY(-3px);
+            display: inline-block;
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+
+        /* Experience Timeline */
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            border-left: 2px solid rgba(255,255,255,0.1);
+            margin-bottom: 40px;
+            opacity: 0; 
+            transform: translateY(20px);
+            transition: var(--transition);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--accent);
+        }
+
+        .timeline-date {
+            font-size: 0.85rem;
+            color: var(--accent);
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .timeline-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .timeline-company {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .timeline-desc ul {
+            list-style-position: inside;
+            color: var(--text-secondary);
+        }
+        
+        .timeline-desc li {
+            margin-bottom: 8px;
+        }
+
+        /* Publications */
+        .pub-card {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: var(--transition);
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .pub-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .pub-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .pub-conf {
+            font-size: 0.9rem;
+            color: var(--accent);
+            margin-bottom: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .pub-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            margin-top: 40px;
+        }
+
+        /* Animation Classes */
+        .visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .subtitle { font-size: 1.2rem; }
+            nav { display: none; } 
+            header { padding-top: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-content">
+            <div class="logo">DA.</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#publications">Publications</a>
+                <a href="#skills">Skills</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container" id="about">
+        <div class="hero-content">
+            <h1>Dhruuv Agarwal</h1>
+            <div class="subtitle">Senior Software Engineer, Machine Learning</div>
+            <p class="bio">
+                Building the future of AI at <strong>Google DeepMind</strong>. 
+                Specializing in Automatic Speech Recognition (ASR), Large Language Models (Gemini 2, 2.5 , 3), and Hotword (wake-word). 
+            </p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/dhruuv-agarwal111" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Dhr11" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://scholar.google.com/citations?user=KYyQ8woAAAAJ&hl=en&oi=ao" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                <a href="mailto:dhruuv111@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section id="experience" class="container">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="timeline-item scroll-animate">
+            <div class="timeline-date">Nov 2024 - Present</div>
+            <h3 class="timeline-title">Senior Software Engineer, Machine Learning</h3>
+            <div class="timeline-company">Google DeepMind (Gemini Smart Dictation)</div>
+            <div class="timeline-desc">
+                <ul>
+                    <li>Enhanced ASR capabilities on mobile for millions of users by training <strong>Gemini 2.0/2.5/3.0 models across Nano, Flash-lite and Flash</strong> sizes.</li>
+                    <li>Achieved State-of-the-Art (SOTA) WER scores for Dysarthric speech recognition on Euphonia and Speech Accessibility Project datasets.</li>
+                    <li>Elevated performance via end-to-end training experiments, incorporating both audio tokenizers and LLMs.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="timeline-item scroll-animate">
+            <div class="timeline-date">Aug 2022 - Nov 2024</div>
+            <h3 class="timeline-title">Software Engineer, Machine Learning</h3>
+            <div class="timeline-company">Google Speech (Hotword Research)</div>
+            <div class="timeline-desc">
+                <ul>
+                    <li>Led development of the first-pass "Hey Google" detection model, improving detection by 27% while keeping size under 50KB.</li>
+                    <li>Researched and revamped quantization methods using hybrid Quantization Aware Training (QAT), saving 40% in memory.</li>
+                    <li>Developed a PQRNN model for post-ASR formatting, enhancing dictation quality across 30+ global regions.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="timeline-item scroll-animate">
+            <div class="timeline-date">Aug 2020 - Jul 2022</div>
+            <h3 class="timeline-title">Data Scientist</h3>
+            <div class="timeline-company">Asurion LLC</div>
+            <div class="timeline-desc">
+                <ul>
+                    <li>Optimized demand forecasting by 17%, reducing inventory stocking costs by $3M annually.</li>
+                    <li>Built an 88% accurate auto sales pitch detection model, ensuring efficient and business-aligned pitches.</li>
+                    <li>Developed a model to identify customer issue resolution, increasing offer rate KPI by 6% and sales by 20%.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="timeline-item scroll-animate">
+            <div class="timeline-date">Jun 2019 - Aug 2019</div>
+            <h3 class="timeline-title">Image and Text Analytics Intern</h3>
+            <div class="timeline-company">Siemens Healthineers (USA)</div>
+            <div class="timeline-desc">
+                <ul>
+                    <li>Classified patient body parts from DICOM image text metadata to improve database retrieval efficiency.</li>
+                    <li>Achieved 95% F1 classification score using regression models with word-character joint loss.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="publications" class="container">
+        <h2 class="section-title">Research Publications</h2>
+        
+        <div class="pub-card scroll-animate">
+            <div class="pub-title">State-of-the-Art Dysarthric Speech Recognition with MetaCL for on-the-fly Personalization</div>
+            <div class="pub-conf">Submitted to ICASSP 2026</div>
+			<a href="https://arxiv.org/abs/2509.15516" target="_blank" title="dysarthric_link">paper</a>
+            <div class="pub-desc">
+                Introduces a hybrid meta-training method for dysarthric ASR via in-context learning. Achieved SOTA WER of 13.9% on Euphonia and 5.3% on SAP Test 1, outperforming speaker-independent baselines.
+            </div>
+        </div>
+
+        <div class="pub-card scroll-animate">
+            <div class="pub-title">LLM-Synth4KWS: Improving KWS with LLM-Generated Confusable Utterances</div>
+            <div class="pub-conf">Interspeech 2025</div>
+            <a href="https://arxiv.org/abs/2505.22995" target="_blank" title="Synth4KWS_link">paper</a>
+			<div class="pub-desc">
+                Enhances custom KWS by leveraging LLMs to generate confusable keywords and TTS for diverse synthesis. Achieved a 3.7% AUC and 11.3% c-AUC improvement on Speech Commands.
+            </div>
+        </div>
+
+        <div class="pub-card scroll-animate">
+            <div class="pub-title">GraphemeAug: Generating Hard Negative Examples for KWS</div>
+            <div class="pub-conf">Interspeech 2025</div>			
+			<a href="https://arxiv.org/abs/2505.14814" target="_blank" title="GraphemeAug_link">paper</a>
+            <div class="pub-desc">
+                Systematic approach for generating synthetic hard negative examples for KWS models via grapheme edits. Achieved a 61% AUC improvement on synthetic hard negatives.
+            </div>
+        </div>
+
+        <div class="pub-card scroll-animate">
+            <div class="pub-title">GE2E-KWS: Generalized end-to-end training and evaluation for zero shot keyword spotting</div>
+            <div class="pub-conf">SLT 2024</div>
+			<a href="https://ieeexplore.ieee.org/abstract/document/10832206" target="_blank" title="GE2E_link">paper</a>
+            <div class="pub-desc">
+                Framework using a 419KB quantized Conformer model with GE2E loss. Achieved a 23.6% relative AUC improvement over a 7.5GB ASR encoder.
+            </div>
+        </div>
+
+		<div class="pub-card scroll-animate">
+            <div class="pub-title">Utilizing TTS synthesized data for efficient development of keyword spotting model</div>
+            <div class="pub-conf">Workshop, Interspeech 2024</div>
+			<a href="https://arxiv.org/abs/2407.18879" target="_blank" title="Utilizing_tts">paper</a>
+            <div class="pub-desc">
+                Details a KWS system using TTS synthesized data. Experiments showed combining 100 speakers/2k real utterances with large TTS data achieved high accuracy, within 3x the error rate of a 3.8M real utterance baseline.
+            </div>
+        </div>
+
+        <div class="pub-card scroll-animate">
+            <div class="pub-title">Synth4Kws: A Framework for Resource-Constrained Keyword Spotting</div>
+            <div class="pub-conf">Workshop, Interspeech 2024</div>
+			<a href="https://arxiv.org/abs/2407.16840" target="_blank" title="Synth4Kws_origin_link">paper</a>
+            <div class="pub-desc">
+                Leverages synthetic data for KWS in resource-constrained settings. Improved EER by 30.1% and AUC by 46.7% using optimal synthesized data.
+            </div>
+        </div>
+
+        <div class="pub-card scroll-animate">
+            <div class="pub-title">Adversarial training of Keyword Spotting to Minimize TTS Data Overfitting</div>
+            <div class="pub-conf">Workshop, Interspeech 2024</div>
+			<a href="https://arxiv.org/abs/2408.10463" target="_blank" title="adversarial_link">paper</a>
+            <div class="pub-desc">
+                Adversarial training for KWS models to minimize TTS data overfitting. Boosted KWS accuracy on real speech by ~12% and 8% improvement without real positive examples.
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="container">
+        <h2 class="section-title">Education & Skills</h2>
+        
+        <div style="margin-bottom: 30px;">
+            <h3 style="margin-bottom: 15px;">Education</h3>
+            <div style="margin-bottom: 20px;">
+                <strong>Masters (MS) in Data Science</strong><br>
+                <span style="color: var(--text-secondary)">Indiana University Bloomington</span><br>
+                <span style="color: var(--accent); font-size: 0.9rem;">GPA 4.0/4.0</span>
+            </div>
+            <div>
+                <strong>Bachelors (B.Tech) in Electronics and Communication</strong><br>
+                <span style="color: var(--text-secondary)">Manipal Institute of Technology</span><br>
+                <span style="color: var(--accent); font-size: 0.9rem;">GPA 8.3/10</span>
+            </div>
+        </div>
+
+        <h3 style="margin-bottom: 15px;">Technical Stack</h3>
+        <div class="skills-grid">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">Jax</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">Lingvo</span>
+            <span class="skill-tag">Keras</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">LLMs</span>
+            <span class="skill-tag">Generative AI</span>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Dhruuv Agarwal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth reveal animation on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-animate').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
